@@ -1,0 +1,47 @@
+body {
+    background-image: url('https://i.pinimg.com/originals/9f/d5/78/9fd5783feecb18869a7e96229349ad04.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}

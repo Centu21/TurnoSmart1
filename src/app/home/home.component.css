@@ -1,0 +1,102 @@
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #5283EE;
+  }
+  
+  /* Header left links */
+  .header-left a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black; /* Color negro para los enlaces */
+  }
+  
+  /* Header right buttons */
+  .header-right button {
+    background-color: white; /* Fondo blanco para los botones */
+    color: black; /* Texto negro para los botones */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 8px; /* Bordes redondeados */
+    margin-left: 10px; /* Espacio entre los botones */
+  }
+  
+  /* Hover effects for links and buttons */
+  header a:hover,
+  .header-right button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  main {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #D2DCF3;
+  }
+  
+  /* Styling for "Centro Médico Cuidarte" */
+  .main-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the slogan */
+  .main-slogan {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-transform: uppercase; /* Convertir a mayúsculas */
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  /* Image space */
+  .image-space {
+    margin-top: 20px;
+  }
+  
+  /* Footer styles */
+  footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #5283EE;
+  }
+  
+  /* Footer professionals layout */
+  .footer-professionals {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Individual professional card */
+  .professional {
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+    background-color: white; /* Fondo blanco para cada profesional */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  /* Professional image styles */
+  .professional img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Imagen en formato circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+  }
+  
+  /* Description styles for professionals */
+  .professional p {
+    font-family: 'Times New Roman', serif;
+    font-size: 12px; /* Tamaño de letra 12px para las descripciones */
+    text-align: justify; /* Justificar el texto */
+  }
+  

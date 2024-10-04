@@ -1,0 +1,48 @@
+<!-- Encabezado -->
+<header>
+    <div class="header-left">
+      <a routerLink="/home">Inicio</a>
+      <a routerLink="/servicios">Servicios</a>
+      <a routerLink="/mis-turnos">Mis Turnos</a>
+      <a routerLink="/contacto">Contacto</a>
+      <a routerLink="/institucion">Institución</a>
+      <a routerLink="/historia-clinica">Historia Clínica</a>
+    </div>
+    <div class="header-right">
+      <span>Bienvenido: {{ usuario?.nombre }}</span>
+      <img [src]="usuario?.fotoPerfil" alt="Foto de perfil" class="profile-image">
+    </div>
+</header>
+
+<!-- Formulario de Historial Médico -->
+<div class="medical-history-form">
+    <h2>Historial Médico</h2>
+    <p class="subtitle">
+      Por favor, complete el siguiente formulario con su historial médico, indicando cualquier enfermedad preexistente o cirugías previas. Esta información es fundamental para garantizar un cuidado adecuado durante su consulta. Todos los datos proporcionados serán tratados de manera estrictamente confidencial y utilizados únicamente para fines médicos. La información ingresada será tomada como una declaración jurada.
+    </p>
+
+    <!-- Sección de Enfermedades Previas -->
+    <h3>Enfermedades Previas</h3>
+    <div *ngFor="let enfermedad of enfermedadesPrevias; let i = index">
+        <select [(ngModel)]="enfermedadesPrevias[i]" name="enfermedad-{{i}}" required>
+            <option *ngFor="let enfermedad of listaEnfermedades" [value]="enfermedad.nombre">{{ enfermedad.nombre }}</option>
+            <option value="otros">Otros</option>
+        </select>
+        <input *ngIf="enfermedadesPrevias[i] === 'otros'" type="text" placeholder="Ingrese la enfermedad" [(ngModel)]="otrasEnfermedades[i]" />
+    </div>
+    <button type="button" (click)="agregarEnfermedad()" [disabled]="enfermedadesPrevias.length >= 20">AGREGAR</button>
+
+    <!-- Sección de Cirugías Previas -->
+    <h3>Cirugías Previas</h3>
+    <div *ngFor="let cirugia of cirugiasPrevias; let i = index">
+        <select [(ngModel)]="cirugiasPrevias[i]" name="cirugia-{{i}}" required>
+            <option *ngFor="let cirugia of listaCirugias" [value]="cirugia.nombre">{{ cirugia.nombre }}</option>
+            <option value="otros">Otros</option>
+        </select>
+        <input *ngIf="cirugiasPrevias[i] === 'otros'" type="text" placeholder="Ingrese la cirugía" [(ngModel)]="otrasCirugias[i]" />
+    </div>
+    <button type="button" (click)="agregarCirugia()" [disabled]="cirugiasPrevias.length >= 20">AGREGAR</button>
+
+    <!-- Botón de Enviar -->
+    <button type="button" (click)="enviarHistorial()" class="submit-button">ENVIAR</button>
+</div>

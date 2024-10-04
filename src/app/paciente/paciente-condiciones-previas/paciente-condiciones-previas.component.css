@@ -1,0 +1,95 @@
+/* Estilos para el Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #5283EE;
+  }
+  
+  .header-left a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right span {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .header-right img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .header-right button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* Efecto hover para enlaces y botones */
+  header a:hover,
+  .header-right button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para el contenido principal */
+  main {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #D2DCF3;
+    padding: 20px;
+  }
+  
+  /* Estilos para el título principal */
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el slogan */
+  h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos adicionales (opcional) */
+  form {
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button[type="submit"] {
+    background-color: #5283EE;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #4169b3;
+  }
+  

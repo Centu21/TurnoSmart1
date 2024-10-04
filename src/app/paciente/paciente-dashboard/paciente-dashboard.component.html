@@ -1,0 +1,44 @@
+<!-- Header -->
+<header>
+    <div class="header-left">
+      <a routerLink="/home">Inicio</a>
+      <a routerLink="/servicios">Servicios</a>
+      <a routerLink="/mis-turnos">Mis Turnos</a>
+      <a routerLink="/contacto">Contacto</a>
+      <a routerLink="/institucion">Institución</a>
+      <a routerLink="/historia-clinica">Historia Clínica</a>
+    </div>
+    <div class="header-right"> 
+      <span>Bienvenido: {{usuario.nombre}}</span>
+      <img [src]="usuario.fotoPerfil" alt="Foto de perfil" class="profile-image">
+    </div>
+  </header>
+  
+  <!-- Body -->
+  <main class="dashboard-container">
+    <div class="dashboard-buttons">
+      <div class="button-container">
+        <button class="dashboard-button">
+          <img src="ruta-a-la-imagen" alt="Icono Reserva Cita">
+          <span>Reserva una cita</span>
+        </button>
+        <button class="dashboard-button">
+          <img src="ruta-a-la-imagen" alt="Icono Solicita Estudio">
+          <span>Solicita un estudio</span>
+        </button>
+      </div>
+      <div class="button-container">
+        <button class="dashboard-button">
+          <img src="ruta-a-la-imagen" alt="Icono Historia Clínica">
+          <span>Historia Clínica</span>
+        </button>
+        <button class="dashboard-button">
+          <img src="ruta-a-la-imagen" alt="Icono Condiciones Previas">
+          <span>Condiciones previas</span>
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  
+  

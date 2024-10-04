@@ -1,0 +1,87 @@
+<!-- Header -->
+<header>
+    <div class="header-left">
+      <a routerLink="/home">Inicio</a>
+      <a routerLink="/servicios">Servicios</a>
+      <a routerLink="/mis-turnos">Mis Turnos</a>
+      <a routerLink="/contacto">Contacto</a>
+      <a routerLink="/institucion">Institución</a>
+      <a routerLink="/historia-clinica">Historia Clínica</a>
+    </div>
+    <div class="header-right"> 
+      <span>Bienvenido: {{usuario.nombre}}</span>
+      <img [src]="usuario.fotoPerfil" alt="Foto de perfil" class="profile-image">
+    </div>
+  </header>
+
+<div class="container">
+    <h2>Reserva de Citas Médicas</h2>
+  
+    <form (ngSubmit)="onSubmit()" #reservaForm="ngForm">
+      <div class="form-group">
+        <label for="especialidad">Seleccionar Especialidad:</label>
+        <select
+          id="especialidad"
+          class="form-control"
+          [(ngModel)]="selectedEspecialidad"
+          name="especialidad"
+          (change)="onEspecialidadChange()"
+          required
+        >
+          <option *ngFor="let especialidad of especialidades" [ngValue]="especialidad">{{ especialidad.nombre }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="profesional">Seleccionar Profesional:</label>
+        <select
+          id="profesional"
+          class="form-control"
+          [(ngModel)]="selectedProfesional"
+          name="profesional"
+          required
+        >
+          <option *ngFor="let profesional of profesionales" [ngValue]="profesional">{{ profesional.nombre }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="fecha">Seleccionar Fecha:</label>
+        <input
+          type="date"
+          id="fecha"
+          class="form-control"
+          [(ngModel)]="selectedDate"
+          name="fecha"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="hora">Seleccionar Hora:</label>
+        <input
+          type="time"
+          id="hora"
+          class="form-control"
+          [(ngModel)]="selectedTime"
+          name="hora"
+          required
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Confirmar Cita</button>
+    </form>
+  
+    <div *ngIf="showConfirmationPopup" class="modal">
+      <div class="modal-content">
+        <h3>Cita Confirmada</h3>
+        <p>Especialidad: {{ selectedEspecialidad.nombre }}</p>
+        <p>Profesional: {{ selectedProfesional.nombre }}</p>
+        <p>Fecha: {{ selectedDate }}</p>
+        <p>Hora: {{ selectedTime }}</p>
+        <button (click)="reserveAnother()">Reserva otra cita</button>
+        <button (click)="goToDashboard()">Usuario</button>
+      </div>
+    </div>
+  </div>
+  
